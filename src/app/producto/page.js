@@ -12,6 +12,8 @@ export default function ListProductos(){
         setProductos(body)
     }
 
+   
+
     useEffect(() => {
         fetchProductos()
     },[])
