@@ -20,6 +20,15 @@ export async function POST(request){
     .insert(producto)
 
     return new Response(JSON.stringify({success: "Creado con éxito"}), {status: 201})
+}
 
+export async function PUT(request){
+    const body = await request.json()
+    const id = body.id
+    const{data: updateData, error} = await supabase
+    .from("producto")
+    .update(body.update)
+    .eq("id",id)
 
+    return new Response(JSON.stringify({success: "Actualizado"}, {status:"200"}))
 }

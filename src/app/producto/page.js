@@ -35,6 +35,7 @@ export default function ListProductos(){
                                 <td style= {producto.stock === 0 ? { backgroundColor: 'red'} : {}}>
                                     {producto.stock}
                                 </td>
+                                <td><button>Actualizar stock</button></td>
                             </tr>
                         )}
                     </tbody>
